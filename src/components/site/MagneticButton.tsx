@@ -1,5 +1,5 @@
-import { Link } from "@tanstack/react-router";
 import { useRef, useState, type MouseEvent, type ReactNode } from "react";
+import { AppLink } from "@/components/site/AppLink";
 import { cn } from "@/lib/utils";
 
 type Tone = "primary" | "ghost-light" | "ghost-dark" | "solid-dark";
@@ -97,9 +97,9 @@ export function MagneticButton({
       className="transition-transform duration-300 ease-out"
     >
       {to ? (
-        <Link to={to} className={base}>
+        <AppLink to={to} className={base}>
           {inner}
-        </Link>
+        </AppLink>
       ) : href ? (
         <a href={href} className={base}>
           {inner}
