@@ -4,6 +4,7 @@ import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
 import { CursorNetwork } from "@/components/site/CursorNetwork";
 import { LoadingScreen } from "@/components/site/Sections";
+import { Toaster } from "@/components/ui/sonner";
 
 export function SiteShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
