@@ -48,11 +48,11 @@ export const Route = createFileRoute("/")({
         content:
           "BLUETORN Technologies is a software engineering and digital transformation company in Navi Mumbai building custom software, web, mobile, AI, ERP, CRM and cloud solutions.",
       },
-      { property: "og:title", content: "BLUETORN Technologies — Software Engineering Company" },
+      { property: "og:title", content: "BLUETORN Technologies — Smarter Technology. Stronger Future." },
       {
         property: "og:description",
         content:
-          "Enterprise-grade software, AI and cloud engineering for startups, SMEs and enterprises across India.",
+          "BLUETORN Technologies is a software engineering and digital transformation company in Navi Mumbai building custom software, web, mobile, AI, ERP, CRM and cloud solutions.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },

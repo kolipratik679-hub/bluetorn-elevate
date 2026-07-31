@@ -78,17 +78,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "BLUETORN Technologies — Software Engineering Company" },
+      { title: "BLUETORN Technologies — Smarter Technology. Stronger Future." },
       {
         name: "description",
         content:
-          "BLUETORN Technologies builds enterprise software, web, mobile, AI, ERP and cloud solutions from Navi Mumbai, India.",
+          "BLUETORN Technologies is a software engineering and digital transformation company in Navi Mumbai building custom software, web, mobile, AI, ERP, CRM and cloud solutions.",
       },
       { name: "author", content: "BLUETORN Technologies" },
       { property: "og:site_name", content: "BLUETORN Technologies" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#16232e" },
+      { property: "og:title", content: "BLUETORN Technologies — Smarter Technology. Stronger Future." },
+      { name: "twitter:title", content: "BLUETORN Technologies — Smarter Technology. Stronger Future." },
+      { property: "og:description", content: "BLUETORN Technologies is a software engineering and digital transformation company in Navi Mumbai building custom software, web, mobile, AI, ERP, CRM and cloud solutions." },
+      { name: "twitter:description", content: "BLUETORN Technologies is a software engineering and digital transformation company in Navi Mumbai building custom software, web, mobile, AI, ERP, CRM and cloud solutions." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/cTjas7zuKiM45UDWiwhn3uqYZPs2/social-images/social-1785460964580-1000936241.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/cTjas7zuKiM45UDWiwhn3uqYZPs2/social-images/social-1785460964580-1000936241.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
