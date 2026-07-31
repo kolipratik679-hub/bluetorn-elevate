@@ -23,6 +23,8 @@ export function SiteShell({ children }: { children: ReactNode }) {
       </main>
       <Footer />
       <Toaster />
+    </div>
+
 
   );
 }
