@@ -17,7 +17,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <LoadingScreen />
       <CursorNetwork />
       <Navbar />
-      <main key={pathname} className="flex-1 animate-[fade-in_0.6s_cubic-bezier(0.16,1,0.3,1)]">
+      <main key={pathname} className="animate-page-in flex-1">
         {children}
       </main>
       <Footer />
