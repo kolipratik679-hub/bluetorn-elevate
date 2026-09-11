@@ -136,7 +136,11 @@
   --accent-foreground: oklch(0.98 0.004 220);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.72 0.11 199);
+  --ring: oklch(0.82 0.088 172);
+  --brand: oklch(0.82 0.088 172);
+  --brand-hover: oklch(0.88 0.075 172);
+  --brand-soft: oklch(0.9 0.055 173);
+  --brand-on: oklch(0.18 0.03 240);
 }
 
 @layer base {
