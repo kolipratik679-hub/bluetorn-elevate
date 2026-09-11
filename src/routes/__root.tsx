@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "BLUETORN Technologies" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#16232e" },
+      { name: "theme-color", content: "#64D9C4" },
       { property: "og:title", content: "BLUETORN Technologies — Smarter Technology. Stronger Future." },
       { name: "twitter:title", content: "BLUETORN Technologies — Smarter Technology. Stronger Future." },
       { property: "og:description", content: "BLUETORN Technologies is a software engineering and digital transformation company in Navi Mumbai building custom software, web, mobile, AI, ERP, CRM and cloud solutions." },
