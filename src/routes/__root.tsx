@@ -109,23 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "BLUETORN Technologies",
-          url: "https://bluetorn.com",
-          email: "info@bluetorn.com",
-          telephone: "+91 77889 96549",
-          foundingDate: "2026",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "Office 01 & 02, Sai Sagar Apartment, Ulwe",
-            addressLocality: "Navi Mumbai",
-            postalCode: "410206",
-            addressRegion: "Maharashtra",
-            addressCountry: "IN",
-          },
-        }),
+        children: JSON.stringify(siteGraph),
       },
     ],
   }),
