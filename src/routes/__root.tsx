@@ -13,6 +13,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteShell } from "@/components/site/SiteShell";
 import { LogoMark } from "@/components/site/Logo";
 import { MagneticButton } from "@/components/site/MagneticButton";
+import { siteGraph } from "@/lib/schema";
 
 function NotFoundComponent() {
   return (
