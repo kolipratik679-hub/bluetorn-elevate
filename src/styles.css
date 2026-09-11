@@ -94,7 +94,7 @@
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.915 0.008 230);
   --input: oklch(0.915 0.008 230);
-  --ring: oklch(0.55 0.09 205);
+  --ring: oklch(0.82 0.088 172);
 
   /* Dark surface family (hero, footer, dark bands) */
   --ink: oklch(0.19 0.035 240);
