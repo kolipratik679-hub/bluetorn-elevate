@@ -13,6 +13,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteShell } from "@/components/site/SiteShell";
 import { LogoMark } from "@/components/site/Logo";
 import { MagneticButton } from "@/components/site/MagneticButton";
+import { siteGraph } from "@/lib/schema";
 
 function NotFoundComponent() {
   return (
@@ -88,7 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "BLUETORN Technologies" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#16232e" },
+      { name: "theme-color", content: "#64D9C4" },
       { property: "og:title", content: "BLUETORN Technologies — Smarter Technology. Stronger Future." },
       { name: "twitter:title", content: "BLUETORN Technologies — Smarter Technology. Stronger Future." },
       { property: "og:description", content: "BLUETORN Technologies is a software engineering and digital transformation company in Navi Mumbai building custom software, web, mobile, AI, ERP, CRM and cloud solutions." },
@@ -109,23 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "BLUETORN Technologies",
-          url: "https://bluetorn.com",
-          email: "info@bluetorn.com",
-          telephone: "+91 77889 96549",
-          foundingDate: "2026",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "Office 01 & 02, Sai Sagar Apartment, Ulwe",
-            addressLocality: "Navi Mumbai",
-            postalCode: "410206",
-            addressRegion: "Maharashtra",
-            addressCountry: "IN",
-          },
-        }),
+        children: JSON.stringify(siteGraph),
       },
     ],
   }),

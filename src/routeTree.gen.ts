@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiCompanyNaviMumbaiRouteImport } from './routes/ai-company-navi-mumbai'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as CompanySlugRouteImport } from './routes/company/$slug'
@@ -24,6 +25,11 @@ import { Route as SolutionsSlugRouteImport } from './routes/solutions/$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiCompanyNaviMumbaiRoute = AiCompanyNaviMumbaiRouteImport.update({
+  id: '/ai-company-navi-mumbai',
+  path: '/ai-company-navi-mumbai',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -79,6 +85,7 @@ const SolutionsSlugRoute = SolutionsSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-company-navi-mumbai': typeof AiCompanyNaviMumbaiRoute
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/company/$slug': typeof CompanySlugRoute
@@ -92,6 +99,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-company-navi-mumbai': typeof AiCompanyNaviMumbaiRoute
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/company/$slug': typeof CompanySlugRoute
@@ -106,6 +114,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-company-navi-mumbai': typeof AiCompanyNaviMumbaiRoute
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/company/$slug': typeof CompanySlugRoute
@@ -121,6 +130,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/ai-company-navi-mumbai'
     | '/contact'
     | '/portfolio'
     | '/company/$slug'
@@ -134,6 +144,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/ai-company-navi-mumbai'
     | '/contact'
     | '/portfolio'
     | '/company/$slug'
@@ -147,6 +158,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/ai-company-navi-mumbai'
     | '/contact'
     | '/portfolio'
     | '/company/$slug'
@@ -161,6 +173,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiCompanyNaviMumbaiRoute: typeof AiCompanyNaviMumbaiRoute
   ContactRoute: typeof ContactRoute
   PortfolioRoute: typeof PortfolioRoute
   CompanySlugRoute: typeof CompanySlugRoute
@@ -180,6 +193,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-company-navi-mumbai': {
+      id: '/ai-company-navi-mumbai'
+      path: '/ai-company-navi-mumbai'
+      fullPath: '/ai-company-navi-mumbai'
+      preLoaderRoute: typeof AiCompanyNaviMumbaiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -257,6 +277,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiCompanyNaviMumbaiRoute: AiCompanyNaviMumbaiRoute,
   ContactRoute: ContactRoute,
   PortfolioRoute: PortfolioRoute,
   CompanySlugRoute: CompanySlugRoute,
@@ -271,3 +292,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

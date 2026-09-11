@@ -84,6 +84,11 @@ export const navigation: NavItem[] = [
           { label: "Startups", to: "/solutions/startups", desc: "MVP engineering that survives scale" },
           { label: "Digital Transformation", to: "/solutions/digital-transformation", desc: "From manual process to live platform" },
           { label: "AI Integration", to: "/solutions/ai-integration", desc: "AI embedded into what you already run" },
+          {
+            label: "AI Company in Navi Mumbai",
+            to: "/ai-company-navi-mumbai",
+            desc: "Why local businesses pick BLUETORN for AI",
+          },
         ],
       },
     ],
