@@ -58,6 +58,10 @@
   --color-teal: var(--teal);
   --color-teal-soft: var(--teal-soft);
   --color-teal-glow: var(--teal-glow);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-on: var(--brand-on);
   --color-sand: var(--sand);
 }
 
