@@ -80,7 +80,7 @@
   --brand: oklch(0.82 0.088 172);
   --brand-hover: oklch(0.74 0.096 172);
   --brand-soft: oklch(0.9 0.055 173);
-  --brand-on: oklch(0.21 0.035 200);
+  --brand-on: oklch(1 0 0);
 
   --primary: oklch(0.82 0.088 172);
   --primary-foreground: oklch(0.21 0.035 200);
@@ -140,7 +140,7 @@
   --brand: oklch(0.82 0.088 172);
   --brand-hover: oklch(0.88 0.075 172);
   --brand-soft: oklch(0.9 0.055 173);
-  --brand-on: oklch(0.18 0.03 240);
+  --brand-on: oklch(1 0 0);
 }
 
 @layer base {
